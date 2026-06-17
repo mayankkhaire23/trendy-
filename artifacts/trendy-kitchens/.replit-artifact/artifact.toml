@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Trendy Kitchens Trolley & Furniture"
+version = "1.0.0"
+id = "artifacts/trendy-kitchens"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19931
+
+[services.development]
+run = "pnpm --filter @workspace/trendy-kitchens run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/trendy-kitchens", "run", "build" ]
+publicDir = "artifacts/trendy-kitchens/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19931"
+BASE_PATH = "/"
