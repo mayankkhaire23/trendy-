@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { useCounter } from "@/hooks/use-counter";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, ChefHat, Monitor, Sofa, Star, ShieldCheck, Clock, HeartHandshake, PenTool, Hammer, Layers } from "lucide-react";
+import { ArrowRight, CheckCircle, ChefHat, Monitor, Star, ShieldCheck, HeartHandshake, PenTool, Hammer, Layers } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -142,6 +142,83 @@ export default function Home() {
             <Link href="/services" className="inline-block border-b-2 border-primary text-primary font-medium pb-1 hover:text-foreground hover:border-foreground transition-colors uppercase tracking-wider text-sm">
               View All Services
             </Link>
+          </div>
+        </section>
+
+        {/* FEATURED PROJECTS */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+              className="text-center max-w-3xl mx-auto mb-16"
+            >
+              <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Our Work</span>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">Featured Projects</h2>
+              <p className="text-muted-foreground text-lg">A glimpse into the spaces we've transformed across Nashik.</p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="grid grid-cols-1 md:grid-cols-12 gap-6"
+            >
+              {/* Large featured card */}
+              <motion.div variants={fadeInUp} className="md:col-span-7 group relative h-[420px] overflow-hidden rounded-sm cursor-pointer">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80"
+                  alt="L-Shape Luxury Kitchen"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-8">
+                  <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-2 block">Luxury Kitchen</span>
+                  <h3 className="text-white text-2xl font-serif font-bold">L-Shape Island Kitchen</h3>
+                  <p className="text-white/70 text-sm mt-2">Gangapur Road, Nashik</p>
+                </div>
+              </motion.div>
+
+              {/* Two stacked cards */}
+              <motion.div variants={staggerContainer} className="md:col-span-5 flex flex-col gap-6">
+                <motion.div variants={fadeInUp} className="group relative h-[198px] overflow-hidden rounded-sm cursor-pointer">
+                  <img
+                    src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=700&q=80"
+                    alt="Premium Wardrobe"
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-1 block">Wardrobe</span>
+                    <h3 className="text-white text-lg font-serif font-bold">Floor-to-Ceiling Wardrobe</h3>
+                  </div>
+                </motion.div>
+                <motion.div variants={fadeInUp} className="group relative h-[198px] overflow-hidden rounded-sm cursor-pointer">
+                  <img
+                    src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=700&q=80"
+                    alt="Modern TV Unit"
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-1 block">TV Unit</span>
+                    <h3 className="text-white text-lg font-serif font-bold">Contemporary Entertainment Wall</h3>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+
+            <div className="mt-12 text-center">
+              <a href="/portfolio" className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-3 font-medium uppercase tracking-wider hover:bg-foreground hover:text-white transition-colors text-sm">
+                View Full Portfolio <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </section>
 

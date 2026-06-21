@@ -97,28 +97,28 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">First Name</label>
-                      <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="John" />
+                      <input data-testid="input-first-name" type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="John" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">Last Name</label>
-                      <input type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="Doe" />
+                      <input data-testid="input-last-name" type="text" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="Doe" />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">Phone Number</label>
-                      <input type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="+91" />
+                      <input data-testid="input-phone" type="tel" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="+91" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium text-foreground">Email</label>
-                      <input type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
+                      <input data-testid="input-email" type="email" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Service Required</label>
-                    <select className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors text-foreground">
+                    <select data-testid="select-service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors text-foreground">
                       <option value="">Select a service...</option>
                       <option value="kitchen">Modular Kitchen</option>
                       <option value="wardrobe">Wardrobes</option>
@@ -129,10 +129,10 @@ export default function Contact() {
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground">Message</label>
-                    <textarea rows={5} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
+                    <textarea data-testid="textarea-message" rows={5} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
                   </div>
 
-                  <button type="submit" className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 font-medium uppercase tracking-wider hover:bg-primary/90 transition-colors">
+                  <button data-testid="button-submit" type="submit" className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 font-medium uppercase tracking-wider hover:bg-primary/90 transition-colors">
                     Send Message
                   </button>
                 </form>

@@ -41,7 +41,7 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               className={`text-sm font-medium transition-colors ${
-                isScrolled ? "text-foreground hover:text-primary" : "text-foreground/90 hover:text-primary"
+                isScrolled ? "text-foreground hover:text-primary" : "text-white/90 hover:text-white"
               }`}
             >
               {link.label}

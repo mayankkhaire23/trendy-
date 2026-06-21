@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export function useCounter(end: number, duration: number = 2000, triggerRef: React.RefObject<HTMLElement | null>) {
   const [count, setCount] = useState(0);
